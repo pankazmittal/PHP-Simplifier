@@ -1,7 +1,5 @@
 <?php
 
-
-
 // Universal timestamp var for whole script
 date_default_timezone_set(constant('zone'));
 $stamp = time();

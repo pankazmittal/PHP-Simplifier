@@ -8,13 +8,17 @@
 function out($string, $type=false)
 {
     if ($type)
-    {
         echo $string;
-    }
     else
-    {
         echo strip_tags($string);
-    }
+}
+
+/** Extract POST or GET request with removing elements which can block a mysql query to execute
+ *
+ */
+function xtract()
+{
+    extract(str_replace('"','\"',str_replace("'","\'",$_REQUEST)));
 }
 
 
@@ -47,7 +51,7 @@ function upload($path, $name)
     $fileexptype=$expfile[count($expfile)-1];
     date_default_timezone_set( constant("zone"));
     $date = date('m/d/Yh:i:sa', time());
-    $rand=rand(10000,99999);
+    $rand=rand(10000,999999);
     $encname=$date.$rand;
     $filename=md5($encname).'.'.$fileexptype;
     $filepath=$path.$filename;

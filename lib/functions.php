@@ -44,7 +44,7 @@ function upload($path, $name)
 {
     $file=$_FILES[$name]['name'];
     $expfile = explode('.',$file);
-    $fileexptype=$expfile[1];
+    $fileexptype=$expfile[count($expfile)-1];
     date_default_timezone_set( constant("zone"));
     $date = date('m/d/Yh:i:sa', time());
     $rand=rand(10000,99999);

@@ -1,2 +1,2 @@
 # PHP-Simplifier
-Just create bunch of classes to reduce development time
+Just created a bunch of classes to reduce development time
